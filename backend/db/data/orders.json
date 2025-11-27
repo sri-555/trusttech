@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "mi00z78oan0ynpwc3p",
+    "user": "mi00xit4kgjggv0wrpj",
+    "products": [
+      {
+        "product": "EarBuds",
+        "quantity": 1,
+        "price": 2999
+      }
+    ],
+    "totalAmount": 2999,
+    "shippingAddress": {
+      "street": "To be provided",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India"
+    },
+    "status": "pending",
+    "createdAt": "2025-11-15T08:28:54.504Z"
+  },
+  {
+    "_id": "mi0250ik1xiquwdl5ae",
+    "user": "mi023fqwqh4kb5dg0tn",
+    "products": [
+      {
+        "product": "EarBuds",
+        "quantity": 1,
+        "price": 2999
+      }
+    ],
+    "totalAmount": 2999,
+    "shippingAddress": {
+      "street": "To be provided",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India"
+    },
+    "status": "pending",
+    "createdAt": "2025-11-15T09:01:25.340Z"
+  },
+  {
+    "_id": "mi025mmx3f34dvqr6ps",
+    "user": "mi023fqwqh4kb5dg0tn",
+    "products": [
+      {
+        "product": "Mouse",
+        "quantity": 1,
+        "price": 899
+      }
+    ],
+    "totalAmount": 899,
+    "shippingAddress": {
+      "street": "To be provided",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India"
+    },
+    "status": "pending",
+    "createdAt": "2025-11-15T09:01:54.009Z"
+  },
+  {
+    "_id": "mi028700v5kkaocxqds",
+    "user": "mi023fqwqh4kb5dg0tn",
+    "products": [
+      {
+        "product": "EarBuds",
+        "quantity": 1,
+        "price": 2999
+      }
+    ],
+    "totalAmount": 2999,
+    "shippingAddress": {
+      "street": "To be provided",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India"
+    },
+    "status": "pending",
+    "createdAt": "2025-11-15T09:03:53.712Z"
+  },
+  {
+    "_id": "mi0e4vmgxfl5ly8ty1h",
+    "user": "mi023fqwqh4kb5dg0tn",
+    "products": [
+      {
+        "product": "Key Board",
+        "quantity": 1,
+        "price": 3499
+      },
+      {
+        "product": "webcam",
+        "quantity": 1,
+        "price": 2499
+      },
+      {
+        "product": "Power Bank",
+        "quantity": 1,
+        "price": 1999
+      },
+      {
+        "product": "Mouse Pad",
+        "quantity": 1,
+        "price": 399
+      },
+      {
+        "product": "Head Phones",
+        "quantity": 1,
+        "price": 4999
+      }
+    ],
+    "totalAmount": 13395,
+    "shippingAddress": {
+      "street": "To be provided",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India"
+    },
+    "status": "pending",
+    "createdAt": "2025-11-15T14:37:14.393Z"
+  }
+]

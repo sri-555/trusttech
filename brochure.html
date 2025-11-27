@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Brochure - Trustech Accessories</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .brochure-container {
+            max-width: 1200px;
+            margin: 80px auto 40px;
+            padding: 40px 20px;
+            background: white;
+        }
+
+        .brochure-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px;
+            background: linear-gradient(90deg, rgb(3, 238, 238) 0%, rgba(199, 53, 53, 0.374) 50%, rgb(230, 143, 20) 100%);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .brochure-header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .brochure-section {
+            margin-bottom: 60px;
+        }
+
+        .brochure-section h2 {
+            color: #333;
+            border-bottom: 3px solid rgb(3, 238, 238);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .product-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .product-item h3 {
+            color: #333;
+            margin: 15px 0 10px;
+        }
+
+        .product-item .price {
+            color: rgb(216, 131, 45);
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .features-list li:before {
+            content: "✓ ";
+            color: rgb(3, 238, 238);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(90deg, rgb(3, 238, 238), rgb(230, 143, 20));
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 20px 10px;
+            transition: transform 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .back-btn {
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+    <nav><ul><li><a href="index.html">← Back to Home</a></li></ul></nav>
+
+    <div class="brochure-container">
+        <div class="brochure-header">
+            <h1>&#128187; Trustech Accessories</h1>
+            <h3>Premium Tech Accessories Catalog 2025</h3>
+        </div>
+
+        <div class="brochure-section">
+            <h2>About Trustech</h2>
+            <p style="font-size: 18px; line-height: 1.8; color: #666;">
+                At Trustech Accessories, we believe that the right gear can transform your digital experience. 
+                Whether you're a student, a professional, or a tech enthusiast, our curated collection of mobile 
+                and laptop accessories is designed to enhance your productivity, protect your devices, and add a 
+                touch of personal style.
+            </p>
+        </div>
+
+        <div class="brochure-section">
+            <h2>Our Product Range</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>&#127911; Wireless Earbuds</h3>
+                    <p class="price">₹2,999</p>
+                    <p>Premium sound quality with active noise cancellation</p>
+                </div>
+                <div class="product-item">
+                    <h3>&#128433; Wireless Mouse</h3>
+                    <p class="price">₹899</p>
+                    <p>Ergonomic design with precision tracking</p>
+                </div>
+                <div class="product-item">
+                    <h3>&#9000; Mechanical Keyboard</h3>
+                    <p class="price">₹3,499</p>
+                    <p>RGB backlit with tactile switches</p>
+                </div>
+                <div class="product-item">
+                    <h3>&#128249; HD Webcam</h3>
+                    <p class="price">₹2,499</p>
+                    <p>1080p video with auto-focus</p>
+                </div>
+                <div class="product-item">
+                    <h3>&#128241; Mobile Cases</h3>
+                    <p class="price">₹599</p>
+                    <p>Shockproof protection with style</p>
+                </div>
+                <div class="product-item">
+                    <h3>&#128433; Mouse Pad</h3>
+                    <p class="price">₹399</p>
+                    <p>Large gaming surface with anti-slip base</p>
+                </div>
+                <div class="product-item">
+                    <h3>&#127911; Headphones</h3>
+                    <p class="price">₹4,999</p>
+                    <p>Over-ear comfort with studio-quality sound</p>
+                </div>
+                <div class="product-item">
+                    <h3>&#128267; Power Bank</h3>
+                    <p class="price">₹1,999</p>
+                    <p>20000mAh fast charging capacity</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="brochure-section">
+            <h2>Why Choose Trustech?</h2>
+            <ul class="features-list">
+                <li>Premium Quality Products from Trusted Brands</li>
+                <li>Competitive Pricing with Regular Discounts</li>
+                <li>Fast & Free Shipping on Orders Above ₹999</li>
+                <li>6-12 Months Warranty on All Products</li>
+                <li>Easy Returns & Exchanges within 30 Days</li>
+                <li>24/7 Customer Support</li>
+                <li>Secure Payment Options</li>
+                <li>Genuine Products with Bill & Warranty Card</li>
+            </ul>
+        </div>
+
+        <div class="brochure-section">
+            <h2>Contact Information</h2>
+            <p style="font-size: 18px; line-height: 2; color: #666;">
+                &#9993; Email: trustech@access.com<br>
+                &#128241; Phone: +91-9876543210<br>
+                &#128205; Location: Chennai, Tamil Nadu, India<br>
+                &#128279; LinkedIn: Trustech_linkedIn<br>
+                &#128247; Instagram: Trustech_access
+            </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="index.html#products" class="download-btn">View Products Online</a>
+            <a href="index.html" class="download-btn back-btn">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

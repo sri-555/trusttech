@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Purchase System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-section {
+            background: #f0f0f0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .result {
+            background: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .error {
+            border-left-color: #f44336;
+        }
+        #pbut {
+            background: rgb(216, 131, 45);
+        }
+    </style>
+</head>
+<body>
+    <h1>Purchase System Test</h1>
+    
+    <div class="test-section">
+        <h2>1. Check if Scripts are Loaded</h2>
+        <button onclick="checkScripts()">Check Scripts</button>
+        <div id="script-result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>2. Check Login Status</h2>
+        <button onclick="checkLogin()">Check Login</button>
+        <div id="login-result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>3. Test Purchase Button</h2>
+        <div class="card3">
+            <h2>Test Product</h2>
+            <h3>This is a test product description</h3>
+            <input type="button" value="purchase" id="pbut">
+        </div>
+        <div id="purchase-result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>4. Manual Login</h2>
+        <input type="email" id="test-email" placeholder="Email" value="test@example.com">
+        <input type="password" id="test-password" placeholder="Password" value="password123">
+        <button onclick="testLogin()">Login</button>
+        <div id="manual-login-result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>5. View Cart</h2>
+        <button onclick="viewCart()">View Cart</button>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/products.js"></script>
+    
+    <script>
+        function checkScripts() {
+            const result = document.getElementById('script-result');
+            let html = '<div class="result">';
+            
+            html += '<p>API object: ' + (typeof API !== 'undefined' ? '✓ Loaded' : '✗ Not loaded') + '</p>';
+            html += '<p>API.auth: ' + (typeof API?.auth !== 'undefined' ? '✓ Loaded' : '✗ Not loaded') + '</p>';
+            html += '<p>API.getAuthToken: ' + (typeof API?.getAuthToken === 'function' ? '✓ Loaded' : '✗ Not loaded') + '</p>';
+            html += '<p>viewCart function: ' + (typeof viewCart === 'function' ? '✓ Loaded' : '✗ Not loaded') + '</p>';
+            html += '<p>addToCart function: ' + (typeof addToCart === 'function' ? '✓ Loaded' : '✗ Not loaded') + '</p>';
+            
+            html += '</div>';
+            result.innerHTML = html;
+        }
+        
+        function checkLogin() {
+            const result = document.getElementById('login-result');
+            const token = localStorage.getItem('authToken');
+            const user = localStorage.getItem('user');
+            
+            let html = '<div class="result">';
+            html += '<p>Auth Token: ' + (token ? '✓ Found' : '✗ Not found') + '</p>';
+            html += '<p>User Data: ' + (user ? '✓ Found' : '✗ Not found') + '</p>';
+            
+            if (user) {
+                try {
+                    const userData = JSON.parse(user);
+                    html += '<p>User Name: ' + userData.name + '</p>';
+                    html += '<p>User Email: ' + userData.email + '</p>';
+                } catch (e) {
+                    html += '<p class="error">Error parsing user data</p>';
+                }
+            }
+            
+            html += '</div>';
+            result.innerHTML = html;
+        }
+        
+        async function testLogin() {
+            const result = document.getElementById('manual-login-result');
+            const email = document.getElementById('test-email').value;
+            const password = document.getElementById('test-password').value;
+            
+            result.innerHTML = '<div class="result">Logging in...</div>';
+            
+            try {
+                const response = await API.auth.login({ email, password });
+                result.innerHTML = '<div class="result">✓ Login successful!<br>User: ' + response.user.name + '</div>';
+            } catch (error) {
+                result.innerHTML = '<div class="result error">✗ Login failed: ' + error.message + '</div>';
+            }
+        }
+        
+        // Check on load
+        window.addEventListener('load', () => {
+            console.log('Test page loaded');
+            console.log('API object:', typeof API);
+            console.log('Purchase buttons:', document.querySelectorAll('#pbut').length);
+        });
+    </script>
+</body>
+</html>

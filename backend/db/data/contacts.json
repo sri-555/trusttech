@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "mhw0nn4ip0wbpumxf6i",
+    "name": "abc",
+    "email": "abc@gmail.com",
+    "phone": "1234567890",
+    "message": "bwdvhbrch",
+    "status": "new",
+    "createdAt": "2025-11-12T13:08:50.514Z"
+  },
+  {
+    "_id": "mi012csjew27r4srtlq",
+    "name": "sri",
+    "email": "abc@gmail.com",
+    "phone": "1234567890",
+    "message": "hello",
+    "status": "new",
+    "createdAt": "2025-11-15T08:31:21.667Z"
+  }
+]

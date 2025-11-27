@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "mhw11afpcds1zamd8ha",
+    "name": "abc",
+    "email": "abc@gmail.com",
+    "password": "$2a$10$VV6GnDuEpbYfWVTQsDi.jOvLEvqtgm5CgayjPseMs5CQoTdX7bf12",
+    "phone": "1234567890",
+    "role": "user",
+    "createdAt": "2025-11-12T13:19:27.253Z"
+  },
+  {
+    "_id": "mhw8m3c7aaa8qqifdp",
+    "name": "abcd",
+    "email": "abcd@gmail.com",
+    "password": "$2a$10$.GjLQNviS29nj6C0qzVNVe7KLYOm8IrwZxUYRYztu4cwTEhjTmSpO",
+    "phone": "1234567809",
+    "role": "user",
+    "createdAt": "2025-11-12T16:51:35.143Z"
+  },
+  {
+    "_id": "mi00xit4kgjggv0wrpj",
+    "name": "sri",
+    "email": "sri@gmail.com",
+    "password": "$2a$10$kgG.I59Mow4kGM1U2d5IQO.Oi/qoJUiUV2OhvymuKSgf/OJmf7XRS",
+    "phone": "9876543210",
+    "role": "user",
+    "createdAt": "2025-11-15T08:27:36.185Z"
+  },
+  {
+    "_id": "mi023fqwqh4kb5dg0tn",
+    "name": "thilaga",
+    "email": "thila@gmail.com",
+    "password": "$2a$10$xWRciSkoytxPCOzzKCNnpOWGi0ScAXd0AVrYlERKCsmUkLZ8BMHGC",
+    "phone": "0987654321",
+    "role": "user",
+    "createdAt": "2025-11-15T09:00:11.768Z"
+  }
+]

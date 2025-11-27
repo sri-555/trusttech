@@ -1,0 +1,349 @@
+*{
+    margin:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgba(179, 227, 249, 0.56);
+    font-family: cursive;
+}
+nav {
+  margin-top: 0px;
+  background: linear-gradient(90deg, rgb(3, 238, 238) 0%, rgba(199, 53, 53, 0.374) 50%, rgb(230, 143, 20) 100%);
+  height: 30px;
+  padding: 15px;
+  position: fixed;
+  :root{ --nav-height:64px; --nav-padding:12px; --nav-gap:8px; }
+
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul{
+  margin-left: 0px;
+  list-style: none;
+  margin:0;
+  display:flex;
+    height: var(--nav-height);
+  align-items: center;
+}
+}
+nav li{
+  padding: 0 6px;
+  display:inline-block;
+  text-decoration:none ;
+}
+
+/* tighten spacing specifically for the left nav group */
+.nav-left ul{ gap: calc(var(--nav-gap) ); }
+.nav-left li a{ padding: 4px 6px; display:inline-block; }
+
+/* Right side nav styling */
+.nav-right ul{
+  display:flex;
+  align-items:center;
+}
+
+.btn{
+    display:flex;
+    gap: var(--nav-gap);
+  text-decoration: none;
+  color: black;
+}
+.btn.secondary{ background: #666; }
+.btn.accent{ background: rgb(230, 143, 20); }
+.btn.primary{ background: rgb(216, 131, 45); }
+.btn.profile{ background: rgb(3, 238, 238); }
+
+/* ensure login button is fully visible from the right edge */
+#login-link { margin-right: 20px; }
+
+/* apply 20px right margin to all right-side nav buttons (Brochure, Cart, Login, Profile) */
+.nav-right .btn { margin-right: 20px; }
+
+/* avoid extra gap after the last button */
+.nav-right ul li:last-child .btn { margin-right: 0; }
+nav a{
+    color:black;
+    text-decoration: none;
+}
+/* Ensure the user account/profile button has a larger right margin on the homepage */
+#user-profile { margin-right: 30px; }
+#buton{
+background-color: rgb(216, 131, 45);
+border-radius: 5px;
+margin-left: 250px;
+font-family: cursive;
+box-shadow: 3px 3px 3px;
+height:40px;
+cursor:pointer;
+}
+.home{
+padding: 15px;
+margin-top: 40px;
+display: grid;
+grid-template-columns: 1fr 1fr ;
+}
+img{
+    padding: 25px;
+    border-radius: 60px;
+}
+#hleft{
+    margin-left: 50px;
+}
+h3 {
+  font-family: "Savate", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 40;
+  font-style: normal;
+}
+.about{
+     background: #45d1d10b;
+     width: 100%;
+background: linear-gradient(90deg, rgb(3, 238, 238) 0%, rgba(199, 53, 53, 0.374) 50%, rgb(230, 143, 20) 100%);
+display: grid;
+ grid-template-columns: 1fr 1fr ;
+ column-gap: 10px;
+
+}
+.color2{
+    height:450px;
+    background: #45d1d1;
+background: linear-gradient(90deg, rgb(3, 238, 238) 0%, rgba(199, 53, 53, 0.374) 50%, rgb(230, 143, 20) 100%);
+}
+#abimg{
+    width:300px;
+    margin-left:200px;
+    color:aqua;
+    
+}
+#aright{
+    margin-right: 200px;
+}
+#buton1{
+    background-color: #45d1d1;
+    border-radius:5px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left:220px;
+    box-shadow: 3px 3px 3px;
+    cursor:pointer;
+    border: none;
+    padding: 10px 20px;
+    font-family: cursive;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+#buton1:hover{
+    background-color: rgb(216, 131, 45);
+    transform: translateY(-2px);
+}
+.section{
+  display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    column-gap: 2px;
+    justify-items: center;
+}
+.features{
+    
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    column-gap: 2px;
+    justify-items: center;
+}
+.ico{
+    background-color:#a1edf2;
+    justify-content: center;
+    justify-items: center;
+   height:150px;
+}
+.card{
+    
+background-color: aliceblue;
+    width:250px;
+   box-shadow: 3px 3px 5px;
+   padding: 20px;
+   border-radius:15px;
+}
+#i1{
+    
+    margin-left: 50px;
+}
+#i2{
+  
+    margin-left: 50px;
+}
+#i3{
+    
+    margin-left: 50px;
+}
+
+.card1{
+    margin-top: 10px;
+    padding:20px;
+    background-color: aliceblue;
+     width:250px;
+     height:300px;
+box-shadow: 3px 3px 5px;
+border-radius:15px;
+}
+.feature-btn{
+   margin-top: 30px;
+   margin-left: 85px;
+    justify-items: center;
+    height:50px;
+    width:50px;
+    border-radius: 15px;
+    background-color:rgb(216, 131, 45);
+    box-shadow: 3px 3px 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+.feature-btn:hover{
+    background-color: rgb(3, 238, 238);
+    transform: scale(1.1);
+}
+.products{
+     display: grid;
+    grid-template-columns:1fr 1fr  1fr 1fr;
+    column-gap: 2px;
+    row-gap: 15px;
+    justify-items: center; 
+}
+#p1{
+    height:200px;
+    width:200px;
+}
+.card3{
+    margin-top: 30px;
+    padding:20px;
+    background-color:#a1edf2;
+     width:250px;
+     height:450px;
+box-shadow: 3px 3px 5px;
+border-radius:15px;
+}
+#pbut{
+  margin-top: 30px;
+   margin-left: 85px;
+    justify-items: center;
+    height:30px;
+    width:70px;
+    border-radius: 15px;
+    background-color:rgb(216, 131, 45);
+    box-shadow: 3px 3px 3px;
+    cursor:pointer;
+}
+h2{
+    text-align: center;
+}
+.test{ height:200px;
+    background: #45d1d1;
+background: linear-gradient(90deg, rgb(3, 238, 238) 0%, rgba(199, 53, 53, 0.374) 50%, rgb(230, 143, 20) 100%);
+height: 300px;
+}
+.testimonial-slider {
+    height:400px;
+  position: relative;
+  width:800px; 
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.testimonial-card {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  padding: 20px;
+  background: #eae5e1;
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px ;
+margin-top: 20px;
+}
+
+.testimonial-card.active {
+  display: block;
+  opacity: 1;
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+ .contact-container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #4A148C;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    #name,#email,#message,#phone, textarea {
+      width: 500px;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    /* Scope button styles to the contact form only so other pages (login) are not affected */
+    .contact button {
+      background-color: rgb(216, 131, 45);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      margin-left:35%;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: block;
+    }
+
+    .contact button:hover {
+      background-color: #3dbddd;
+    }
+    .ucontact{
+        margin-left: 50px;
+        background-color: aliceblue;
+        margin-right: 20%;
+        padding: 5px;
+        justify-items: center;
+        box-shadow: 3px 3px 4px;
+        border-radius:15px;
+    }
+   

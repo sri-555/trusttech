@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Login Flow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-box {
+            background: #f0f0f0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .result {
+            background: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .error {
+            border-left-color: #f44336;
+        }
+        .success {
+            border-left-color: #4CAF50;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login Flow Test</h1>
+    
+    <div class="test-box">
+        <h2>Step 1: Check Current Status</h2>
+        <button onclick="checkStatus()">Check Login Status</button>
+        <div id="status-result"></div>
+    </div>
+    
+    <div class="test-box">
+        <h2>Step 2: Simulate Login</h2>
+        <p>This will simulate a successful login</p>
+        <button onclick="simulateLogin()">Simulate Login</button>
+        <div id="login-result"></div>
+    </div>
+    
+    <div class="test-box">
+        <h2>Step 3: Check After Login</h2>
+        <button onclick="checkAfterLogin()">Check Status After Login</button>
+        <div id="after-login-result"></div>
+    </div>
+    
+    <div class="test-box">
+        <h2>Step 4: Test Logout</h2>
+        <button onclick="testLogout()">Logout</button>
+        <div id="logout-result"></div>
+    </div>
+    
+    <div class="test-box">
+        <h2>Step 5: Go to Main Site</h2>
+        <button onclick="window.location.href='index.html'">Open Main Site</button>
+        <p>After login, you should see your name in the navbar instead of "Login" button</p>
+    </div>
+
+    <script src="js/api.js"></script>
+    
+    <script>
+        function checkStatus() {
+            const result = document.getElementById('status-result');
+            const token = localStorage.getItem('authToken');
+            const user = localStorage.getItem('user');
+            
+            let html = '<div class="result">';
+            html += '<p><strong>Auth Token:</strong> ' + (token ? '✓ Found' : '✗ Not found') + '</p>';
+            html += '<p><strong>User Data:</strong> ' + (user ? '✓ Found' : '✗ Not found') + '</p>';
+            
+            if (user) {
+                try {
+                    const userData = JSON.parse(user);
+                    html += '<p><strong>User Name:</strong> ' + userData.name + '</p>';
+                    html += '<p><strong>User Email:</strong> ' + userData.email + '</p>';
+                } catch (e) {
+                    html += '<p class="error">Error parsing user data</p>';
+                }
+            }
+            
+            html += '</div>';
+            result.innerHTML = html;
+        }
+        
+        function simulateLogin() {
+            const result = document.getElementById('login-result');
+            
+            // Simulate login data
+            const fakeToken = 'test-token-' + Date.now();
+            const fakeUser = {
+                name: 'Test User',
+                email: 'test@example.com',
+                role: 'user'
+            };
+            
+            localStorage.setItem('authToken', fakeToken);
+            localStorage.setItem('user', JSON.stringify(fakeUser));
+            
+            result.innerHTML = '<div class="result success">✓ Login simulated successfully!<br>Token and user data saved to localStorage</div>';
+        }
+        
+        function checkAfterLogin() {
+            const result = document.getElementById('after-login-result');
+            const token = localStorage.getItem('authToken');
+            const user = localStorage.getItem('user');
+            
+            if (token && user) {
+                const userData = JSON.parse(user);
+                result.innerHTML = '<div class="result success">✓ You are logged in as: <strong>' + userData.name + '</strong><br>Now go to the main site to see your profile!</div>';
+            } else {
+                result.innerHTML = '<div class="result error">✗ Not logged in. Please simulate login first.</div>';
+            }
+        }
+        
+        function testLogout() {
+            localStorage.removeItem('authToken');
+            localStorage.removeItem('user');
+            
+            const result = document.getElementById('logout-result');
+            result.innerHTML = '<div class="result success">✓ Logged out successfully!<br>Token and user data removed</div>';
+        }
+        
+        // Check on load
+        window.addEventListener('load', () => {
+            checkStatus();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Trustech Accessories
+    </title>
+    <link rel="Stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+    <body>
+      <nav>
+        <div class="nav-left">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#section">Services</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#test">Testimonial</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <ul>
+            <li><a href="brochure.html" class="btn secondary">&#128196; Brochure</a></li>
+            <li><a href="#cart" onclick="event.preventDefault(); viewCart();" class="btn accent">&#128722; Cart</a></li>
+            <li><a href="login.html" id="login-link" class="btn primary">&#128274; Login</a></li>
+            <li><a href="#" id="user-profile" style="display: none;" class="btn profile">&#128100; <span id="user-name"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+        <div class="home" id="home">
+                <div class="left" id="hleft">
+                  <br><br><br><center><h1>Trustech Accessories</h1></center><br>
+                <h3>           Discover premium accessories that protect, enhance and personalize 
+your devices. From fast chargers to sleek laptop stands, we’ve got everything 
+you need to stay connected and in style.  </h3><br>
+<a href="#products" id="buton">View Products</a>
+</div>
+<div class="right">
+    <img src="image/home.jpeg" alt="img1">
+</div>
+        </div>
+        <div class="about" id="about">
+            <div class="left">
+                <img src="image/img2.jpeg" id="abimg" alt="img2">
+            </div>
+            <div class="right" id="aright">
+                <center><h1>About Us</h1></center><br>
+                <h3 >We’re passionate about innovation and committed to customer satisfaction. That’s why we offer fast shipping, secure payments, and responsive support At TechNest Accessories, we believe that the right gear can transform your digital experience. Whether you're a student, a professional, or a tech enthusiast, our curated collection of mobile and laptop accessories is designed to enhance your productivity, protect your devices, and add a touch of personal style.</h3>
+                <button id="buton1" onclick="window.location.href='#section'">Know More</button>
+            </div>
+        </div><br><center><h1>Services</h1></center><br>    
+        <div class="section" id="section">
+            <div class="card">
+                    <div class="ico">
+  <img src="image/icons8-samsung-120.png" id="i1"alt="Samsung Logo" class="brand-icon"/></div>
+  <h2>brand specification </h2>
+  <h3>- Some platforms, like ASUS India, offer accessories tailored to their own devices, ensuring compatibility and optimized performance.
+</h3>
+</div>
+  <div class="card">
+<div class="ico">
+  <img src="image/icons8-customer-support-96.png" id="i2" alt="Samsung Logo" class="brand-icon"/></div>
+  <h2>Customer Support</h2>
+  <h3>Services often include warranty checks, repair status tracking, and access to manuals and drivers
+</h3>
+</div>  <div class="card">
+<div class="ico">
+  <img src="image/icons8-personalization-96.png" id="i3" alt="Samsung Logo" class="brand-icon"/></div>
+  <h2> Personalization</h2>
+  <h3> Many sites let you customize accessories like laptop skins or phone cases to suit your style.
+  </h3>
+</div>
+</div><br>
+<br>
+<div class="color2"><center><h1>Features</h1></center><br>
+
+<div class="features" id="features">
+            <div class="card1">
+                    <div class="ico"><h3><b>Product Categories</b> 
+</h3><h3 style="margin-top: 20px; padding:10px">Clearly organized sections with filters for brand, price, compatibility.</h3>
+                    </div>
+   <button class="feature-btn" data-feature="categories">&rarr;</button>
+</div>
+  <div class="card1">
+<div class="ico"><h3><b>Analytics Dashboard</b> 
+</h3><h3 style="margin-top: 20px; padding:10px;">Track sales, traffic, and customer behavior.</h3></div>
+  <button class="feature-btn" data-feature="analytics">&rarr;</button>
+</div>  <div class="card1">
+<div class="ico"><h3><b>Warranty Info</b>   </h3>
+<h3 style="margin-top: 20px;padding:10px">Clear policies and hassle-free return process.</h3></div>
+ <button class="feature-btn" data-feature="warranty">&rarr;</button>
+</div>
+
+</div>
+</div>
+<br>
+<center><h1>Products</h1></center>
+<div class="products" id="products">
+        
+            <div class="card3">
+  <img src="image/ear.jpeg" id="p1"alt="img1" class="brand-icon"/>
+  <div class="text"><h2>EarBuds </h2>
+<h3>Compact in-ear speakers for private listening, often wireless and portable.</h3>
+ <input type="button" value="purchase" id="pbut">
+</div>
+</div>
+   <div class="card3">
+  <img src="image/mou.jpeg" id="p1"alt="img2" class="brand-icon"/>
+  <div class="text"><h2>Mouse</h2><h3>A handheld device that controls the cursor on your screen—click, drag, scroll!</h3><input type="button" value="purchase" id="pbut"></div>
+</div>    <div class="card3">
+  <img src="image/key.jpeg" id="p1"alt="img3" class="brand-icon"/>
+  <div class="text"><h2>Key Board </h2><h3> A panel of keys used to type text and commands into your computer.</h3><input type="button" value="purchase" id="pbut"></div>
+</div>
+   <div class="card3">
+  <img src="image/web.jpeg" id="p1"alt="img4" class="brand-icon"/>
+  <div class="text"><h2>webcam </h2><h3> A small camera used for video calls, streaming, or recording on a computer.</h3><input type="button" value="purchase" id="pbut"></div>
+</div>
+</div><br>
+<div class="products">
+        
+            <div class="card3">
+  <img src="image/mobcase.jpeg" id="p1"alt="img1" class="brand-icon"/>
+  <div class="text"><h2>Mobile Cases </h2><h3>A protective cover for your phone that can also add grip or style</h3><input type="button" value="purchase" id="pbut"></div>
+</div>
+   <div class="card3">
+  <img src="image/mpad.jpeg" id="p1"alt="img2" class="brand-icon"/>
+  <div class="text"><h2>Mouse Pad</h2><h3>A smooth surface that improves mouse movement and precision.</h3><input type="button" value="purchase" id="pbut"></div>
+</div>    <div class="card3">
+  <img src="image/head.jpeg" id="p1"alt="img3" class="brand-icon"/>
+  <div class="text"><h2>Head Phones </h2><h3>Over-ear or on-ear audio gear for immersive sound and noise isolation.</h3><input type="button" value="purchase" id="pbut"></div>
+</div>
+   <div class="card3">
+  <img src="image/pow.jpeg" id="p1"alt="img4" class="brand-icon"/>
+  <div class="text"><h2>Power Bank</h2><h3>A portable battery that charges your devices on the go.</h3><input type="button" value="purchase" id="pbut"></div>
+</div>
+</div>
+<br>
+<center><h1>Testimonials</h1></center>
+<div class="test" id="test">
+<div class="testimonial-slider">
+  <div class="testimonial-card active">
+    <img src="image/sara.jpeg" alt="sara photo" />
+    <h4>Sarath N.</h4>
+    <p>"The laptop sleeve is super sleek—keeps my MacBook safe and stylish!"</p>
+  </div>
+  <div class="testimonial-card">
+    <img src="image/dhu.jpeg" alt="dhurkaphoto" />
+    <h4>Dhurka S.</h4>
+    <p>"Excellent power bank—charges my phone faster than expected."</p>
+  </div>
+  <div class="testimonial-card">
+    <img src="image/dhava.jpg" alt="dhava photo" />
+    <h4>Dhava G.</h4>
+    <p>"Love the Bluetooth keyboard. Lightweight and easy to carry anywhere."</p>
+  </div>
+  <div class="testimonial-card">
+    <img src="image/maha.jpeg" alt="maha photo" />
+    <h4>Maha M.</h4>
+    <p>"Superb USB hub—solved all my laptop port issues."</p>
+  </div>
+</div></div><br><br>
+<div class="contact" id="contact">
+  <div class="ucontact">
+    <h1>Contact Details</h1>
+<form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email ID</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="phone">Contact Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="message">Comments</label>
+      <textarea id="message" name="message" placeholder="Your message or feedback..."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="our details">
+<h1><strong>Our Contact Details</strong></h1><br><br>
+      <a href="#email"></a><p>&#9993; Email: trustech@access.com</p></a> <br>
+    <a href="#insta"><p>&#128247; Insta:&nbsp;Trustech_access</p></a> <br>
+      <a href="#linked"><p>&#128279; LinkedIn:Trustech_linkedIn</p></a> <br>
+      <p>&#128241; Phone:&nbsp; +91-9876543210</p><br>
+      <p>&#128205; Location: Chennai, Tamil Nadu, India</p>
+
+  </div>
+</div>
+<script>
+  const cards = document.querySelectorAll('.testimonial-card');
+  let current = 0;
+
+  function showNextTestimonial() {
+    cards[current].classList.remove('active');
+    current = (current + 1) % cards.length;
+    cards[current].classList.add('active');
+  }
+
+  setInterval(showNextTestimonial, 3000);
+  
+  // Smooth scroll for navigation links
+  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      
+      // Skip if it's the cart link or user profile
+      if (href === '#cart' || href === '#') return;
+      
+      e.preventDefault();
+      const target = document.querySelector(href);
+      
+      if (target) {
+        const navHeight = document.querySelector('nav').offsetHeight;
+        const targetPosition = target.offsetTop - navHeight - 20;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+<script src="js/api.js"></script>
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/products.js"></script>
+  </body>
+</html>
+
